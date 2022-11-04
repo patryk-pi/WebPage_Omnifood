@@ -57,10 +57,10 @@ Medium: 11px
 */
 
 :root {
-    --primary-color: #e67e22;
+    --primary-color: rgba(230, 126, 34, 0.35);
     --primary-tint: #fdf2e9;
     --secondary-tint: #fae5d3;
-    --tertirary-tint: #eb984e;
+    --tertirary-tint: rgba(235, 152, 78, 0.35);
 
     --primary-shade: #cf711f;
     --secondary-shade: #45260a;
