@@ -8,6 +8,7 @@
     background-color: var(--primary-tint);
     height: 9.6rem;
     padding: 0 4.8rem;
+    position: relative;
 }
 
 .logo {
@@ -51,6 +52,24 @@
     background-color: var(--primary-shade);
 }
 
+    /* MOBILE */
+
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+.icon-menu-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: var(--dark-gray);
+}
+
+.icon-menu-nav[name="close-outline"] {
+    display: none;
+}
     /* HERO SECTION */
 
 .section-hero {
