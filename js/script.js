@@ -32,11 +32,32 @@ allLinks.forEach(function (link) {
         // Scroll to other links
         if (href !== "#" && href.startsWith("#")) {
             const sectionEl = document.querySelector(href);
-            sectionEl.scrollIntoView({ behavior: "smooth" });
+            sectionEl.scrollIntoView({behavior: "smooth"});
         }
 
-        // Close mobile naviagtion
+        // Close mobile navigation
         if (link.classList.contains("main-nav-link"))
             headerEl.classList.toggle("nav-open");
     });
 });
+
+// STICKY NAVIGATION
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const observer = new IntersectionObserver(function (entries) {
+        const ent = entries[0];
+        if (ent.isIntersecting === false) {
+            document.body.classList.add("sticky")
+        }
+        if (ent.isIntersecting) {
+            document.body.classList.remove("sticky")
+        }
+    },
+
+    {
+        root: null,
+        threshold: 0,
+        rootMargin: "-80px"
+    })
+observer.observe(sectionHeroEl);
